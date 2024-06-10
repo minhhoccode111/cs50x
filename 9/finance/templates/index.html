@@ -1,0 +1,64 @@
+{% extends "layout.html" %} {% block title %} Home {% endblock %} {% block
+main %}
+
+<style>
+</style>
+
+<div class="">
+    <table style="width: 50%; margin: auto;">
+        <thead style="text-align: right">
+            <tr class="">
+                <th style="text-align: left;">Symbol</th>
+                <th style="">Shares</th>
+                <th style="">Price</th>
+                <th style="">Total</th>
+            </tr>
+        </thead>
+
+        <tbody style="text-align: right">
+            {% for stock in stocks %}
+                <tr class="">
+                    <td style="text-align: left;">
+                        {{ stock["symbol"] }}
+                    </td>
+
+                    <td class="">
+                       {{ stock["shares"] }}
+                    </td>
+
+                    <td class="">
+                        {{ stock["price_stock"] | usd }}
+                    </td>
+
+                    <td class="">
+                        {{ stock["sum_stock"] | usd }}
+                    </td>
+                </tr>
+            {% endfor %}
+
+                <tr class="">
+                    <td class=""></td>
+                    <td class=""></td>
+                    <td class=""><b>Sum Stocks</b></td>
+                    <td class="">{{ sum_stocks | usd }}</td>
+                </tr>
+
+                <tr class="">
+                    <td class=""></td>
+                    <td class=""></td>
+                    <td class=""><b>Cash</b></td>
+                    <td class="">{{ cash | usd }}</td>
+                </tr>
+
+                <tr class="">
+                    <td class=""></td>
+                    <td class=""></td>
+                    <td class=""><b>Total</b></td>
+                    <td class="">{{ ( cash + sum_stocks ) | usd }}</td>
+                </tr>
+
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

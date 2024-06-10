@@ -1,0 +1,48 @@
+{% extends "layout.html" %} {% block title %} Profile {% endblock %} {% block
+main %}
+
+<style></style>
+
+<div class="">
+  <h2 class="">Info</h2>
+  <table style="width: 50%; margin: auto">
+    <thead style="text-align: right">
+      <tr class="">
+        <th style="text-align: left">Id</th>
+        <th style="">Username</th>
+        <th style="">Cash</th>
+      </tr>
+    </thead>
+
+    <tbody style="text-align: right">
+      <tr class="">
+        <td style="text-align: left">{{ info["id"] }}</td>
+        <td class="">{{ info["username"] }}</td>
+        <td class="">{{ info["cash"] | usd }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="">
+  <h2 class="">Free money</h2>
+  <form action="/profile" method="post">
+    <div class="mb-3">
+      <input
+        autocomplete="off"
+        autofocus
+        class="form-control mx-auto w-auto"
+        id="cash"
+        name="cash"
+        placeholder="Enter a number"
+        type="number"
+        required
+        min="0"
+      />
+    </div>
+
+    <button class="btn btn-primary" type="submit">Add</button>
+  </form>
+</div>
+
+{% endblock %}

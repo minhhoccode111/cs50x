@@ -1,0 +1,40 @@
+{% extends "layout.html" %} {% block title %} History {% endblock %} {% block
+main %}
+
+<style></style>
+
+<div class="">
+  <h2 class="">History</h2>
+  <table style="width: 50%; margin: auto">
+    <thead style="text-align: right">
+      <tr class="">
+        <th style="text-align: left">Symbol</th>
+        <th style="">Type</th>
+        <th style="">Shares</th>
+        <th style="">Price</th>
+        <th style="">Date</th>
+        <th style="">Time</th>
+      </tr>
+    </thead>
+
+    <tbody style="text-align: right">
+      {% for action in transactions %}
+      <tr class="">
+        <td style="text-align: left">{{ action["symbol"] }}</td>
+
+        <td class="">{{ action["type"] }}</td>
+
+        <td class="">{{ action["shares"] }}</td>
+
+        <td class="">{{ action["price"] | usd }}</td>
+
+        <td class="">{{ action["transaction_time"].split(' ')[0] }}</td>
+
+        <td class="">{{ action["transaction_time"].split(' ')[1] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
