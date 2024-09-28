@@ -1,0 +1,22 @@
+sort1 uses: bubble sort
+sort1 take about 0.25s with sorted50000
+sort1 take about 5s with reverse50000
+
+How do you know?: 
+- because best case faster than merge sort (n)
+
+sort2 uses: merge sort
+sort2 take about 0.5s with sorted50000
+sort2 take about 0.5s with reverse50000
+
+How do you know?: 
+- merge sort is the most efficient sorting algorithm
+- because best case == worst case (n log n)
+
+sort3 uses: selection sort
+sort3 take about 3s with reverse50000
+sort3 take about 3s with sorted50000
+
+How do you know?:
+- because best case == worst case (n*n)
+- both cases slower than merge sort
