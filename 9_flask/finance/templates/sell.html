@@ -1,0 +1,57 @@
+{% extends "layout.html" %} {% block title %} Sell Stock {% endblock %} {% block
+main %}
+
+<div class="">
+    <h2 class="">Current Balance</h2>
+    <table style="width: 50%; margin: auto">
+        <thead style="text-align: right">
+            <tr class="">
+                <th style="text-align: left">Symbol</th>
+                <th style="">Shares</th>
+                <th style="">Price</th>
+            </tr>
+        </thead>
+
+        <tbody style="text-align: right">
+            {% for stock in user_stocks %}
+            <tr class="">
+                <td style="text-align: left">{{ stock["symbol"] }}</td>
+
+                <td class="">{{ stock["shares"] }}</td>
+
+                <td class="">{{ stock["price"] | usd }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <form action="/sell" method="post">
+        <h2 class="">Sell Stock Now</h2>
+        <div class="mb-3">
+            <select name="symbol" id="symbol" class="" required>
+                <option value="" class="">-- Select Symbol To Sell --</option>
+                {% for stock in user_stocks %}
+                <option value="{{ stock["symbol"] }}" class="">{{stock["symbol"]}}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <input
+                autocomplete="off"
+                autofocus
+                class="form-control mx-auto w-auto"
+                id="shares"
+                name="shares"
+                placeholder="Shares number to sell"
+                type="number"
+                required
+                min="0"
+            />
+        </div>
+
+        <button class="btn btn-primary" type="submit">Sell</button>
+    </form>
+</div>
+
+{% endblock %}

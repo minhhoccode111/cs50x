@@ -1,0 +1,22 @@
+{% extends "layout.html" %} {% block title %} Result quote {% endblock %} {% block
+main %}
+
+<style>
+.wrap {
+  display: grid;
+  grid-template: 1fr 1fr / 100px 100px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+</style>
+
+<div class="wrap">
+  <p class=""><b>Symbol</b></p>
+  <p class=""><b>Price</b></p>
+
+  <p class="">{{ quote.symbol if quote else "Not existed" }}</p>
+  <p class="">{{ quote.price | usd if quote else "Not existed" }}</p>
+</div>
+
+{% endblock %}
