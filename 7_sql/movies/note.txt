@@ -1,0 +1,17 @@
+-- JOIN syxtan
+SELECT col1, col2 FROM table1
+JOIN table2 
+ON table1.col1 = table2.col3;
+
+-- NESTED QUERY
+SELECT col1 from table1
+WHERE col2 = ( -- nested
+SELECT -- ...
+)
+
+-- NESTED QUERY
+SELECT col1 from table1
+WHERE col2 IN | ALL | ANY | > | = | < ( -- nested
+SELECT -- ...
+)
+
