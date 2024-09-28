@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="styles.css" rel="stylesheet" />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const helloworld = document.querySelector(`#helloworld`);
+        helloworld.addEventListener("click", () => {
+          alert(`Hello, world`);
+        });
+      });
+    </script>
+
+    <title>This is homepage</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header id="header" class="header dark-bg white-txt center">
+        <div class="header-fixed row">
+          <div class="header-logo b">Header Logo</div>
+          <nav id="nav" class="nav">
+            <ul class="nav-links row">
+              <li class="nav-link"><a href="/" class="">Home</a></li>
+              <li class="nav-link"><a href="/about" class="">About</a></li>
+              <li class="nav-link"><a href="/blog" class="">Blog</a></li>
+              <li class="nav-link"><a href="/contact" class="">Contact</a></li>
+              <li class="nav-link"><a href="/work" class="">Work</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main id="main" class="main">
+        <section id="section-1" class="section-1 center white-txt dark-bg">
+          <h2 class="">This website is awesome</h2>
+          <div class="content-ctn row">
+            <article class="article-1">
+              <h2 class="font48 b-super">This website is awesome</h2>
+              <p>
+                This website has some subtext that goes here under the main
+                title. It's smaller font and the color is lower contrast.
+              </p>
+              <button class="sign-up-btn blue-bg padding816 margin8 white-txt">
+                Sign up
+              </button>
+            </article>
+            <div class="img-ctn center">
+              <p>this is a placeholder for an image</p>
+            </div>
+          </div>
+        </section>
+        <section id="section-2" class="section-2">
+          <h2 class="dark-txt margin24 b-super">Some random infomation.</h2>
+          <article class="article-2 row padding16">
+            <div class="card padding8">
+              <div class="img-card-ctn">
+                <img src="https://google.com" alt="google" />
+              </div>
+              <h3 class="subtext">This is some subtext under an image</h3>
+            </div>
+            <div class="card padding8">
+              <div class="img-card-ctn">
+                <img src="https://google.com" alt="google" />
+              </div>
+              <p class="subtext">This is some subtext under an image</p>
+            </div>
+            <div class="card padding8">
+              <div class="img-card-ctn">
+                <img src="https://google.com" alt="google" />
+              </div>
+              <p class="subtext">This is some subtext under an image</p>
+            </div>
+            <div class="card padding8">
+              <div class="img-card-ctn">
+                <img src="https://google.com" alt="google" />
+              </div>
+              <p class="subtext">This is some subtext under an image</p>
+            </div>
+          </article>
+        </section>
+        <section id="section-3" class="section-3 gray-bg dark-txt">
+          <h2 class="t i font36">
+            This is an inspiring quote, or a testimonial from a customer. Maybe
+            it's just filling up space, or maybe people will actually read it.
+            Who knows? All I know is that it looks nice.
+          </h2>
+          <article class="article-3 col">
+            <h2 class="t i font36">
+              This is an inspiring quote, or a testimonial from a customer.
+              Maybe it's just filling up space, or maybe people will actually
+              read it. Who knows? All I know is that it looks nice.
+            </h2>
+            <p class="b font36">-Thor, God of Thunder</p>
+          </article>
+        </section>
+        <section id="section-4" class="section-4 center">
+          <h3>Call to action! It's time!</h3>
+          <article class="article-4 blue-bg white-txt row">
+            <div>
+              <h3>Call to action! It's time!</h3>
+              <p>
+                Sign up for our product by clicking that button right over
+                there!
+              </p>
+            </div>
+            <button
+              id="helloworld"
+              class="sign-up-btn-1 blue-bg white-txt padding816"
+            >
+              Sign up
+            </button>
+          </article>
+        </section>
+      </main>
+      <footer id="footer" class="footer dark-bg center padding24">
+        <p class="white-txt">Copyright @ The Odin Project 2021</p>
+      </footer>
+    </div>
+  </body>
+</html>

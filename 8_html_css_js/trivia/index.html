@@ -1,0 +1,100 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+
+    <title>Trivia!</title>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const one = document.querySelector(`#one`);
+        const two = document.querySelector(`#two`);
+        const three = document.querySelector(`#three`);
+        const correctOne = document.querySelector(`#correctOne`);
+        const incorrectOne = document.querySelector(`#incorrectOne`);
+
+        const form = document.querySelector(`#form`);
+        const answer = document.querySelector(`#answer`);
+        const correctTwo = document.querySelector(`#correctTwo`);
+        const incorrectTwo = document.querySelector(`#incorrectTwo`);
+
+        one.addEventListener("click", (e) => {
+          correctOne.classList.add("none");
+          incorrectOne.classList.remove("none");
+        });
+
+        two.addEventListener("click", (e) => {
+          correctOne.classList.remove("none");
+          incorrectOne.classList.add("none");
+        });
+
+        three.addEventListener("click", (e) => {
+          correctOne.classList.add("none");
+          incorrectOne.classList.remove("none");
+        });
+
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          if (answer.value === "5") {
+            correctTwo.classList.remove("none");
+            incorrectTwo.classList.add("none");
+          } else {
+            correctTwo.classList.add("none");
+            incorrectTwo.classList.remove("none");
+          }
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="header">
+      <h1>Trivia!</h1>
+    </div>
+
+    <div class="container">
+      <div class="section">
+        <h2>Part 1: Multiple Choice</h2>
+
+        <hr />
+        <h3 class="">What is 1 + 1?</h3>
+
+        <button id="one" type="button">1</button>
+        <button id="two" type="button">2</button>
+        <button id="three" type="button">3</button>
+
+        <p id="correctOne" class="none correct">Correct</p>
+        <p id="incorrectOne" class="none incorrect">Incorrect</p>
+      </div>
+
+      <div class="section">
+        <h2>Part 2: Free Response</h2>
+
+        <hr />
+        <h3 class="">
+          How many programming languages have you learned during CS50?
+        </h3>
+
+        <form id="form" class="">
+          <label for="answer">
+            <input id="answer" type="number" class="" placeholder="0" />
+            <button id="check-answer" type="submit" class="">
+              Check answer
+            </button>
+          </label>
+
+          <p id="correctTwo" class="none correct">
+            Correct. Scratch, C, Python, SQL, JavaScript
+          </p>
+          <p id="incorrectTwo" class="none incorrect">Incorrect</p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

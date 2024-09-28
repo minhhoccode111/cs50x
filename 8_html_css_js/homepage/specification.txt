@@ -1,0 +1,22 @@
+10 html tags, 5 css properties
+
+html: the document itself
+head: info about the document
+meta: support mobile devices
+link: include bootstrap and fonts
+script: custom javascript
+title: the document title
+body: include content to display for user
+header: accessibility to identify the header part of the document
+main: accessibility to identify the main part of the document
+footer: accessibility to identify the footer part of the document
+div: stand for division
+p: stand for paragraph
+a: hyperlink to other routes or other part on the internet
+
+
+padding: to add space inside container
+margin: to add space outside container
+display: to define how element should display itself
+color: color of the text inside element
+background-color: color of the element's background
