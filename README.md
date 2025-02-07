@@ -5,3 +5,5 @@ This is CS50, Harvard University’s introduction to the intellectual enterprise
 ## Course [here](https://cs50.harvard.edu/x/2024/)
 
 ## Certificate [here]()
+
+## Install [CS50 Library](https://cs50.readthedocs.io/libraries/cs50/c/)
